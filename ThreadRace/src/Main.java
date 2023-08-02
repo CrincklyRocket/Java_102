@@ -20,7 +20,6 @@ public class Main {
 
         int batchSize = 25;
         for (int i = 0; i < 4; i++) {
-            List<Integer> sublist = list.subList(i * batchSize, (i + 1) * batchSize);
             executor.execute(new Proccess(list, evenNumbers, oddNumbers));
         }
             executor.shutdown();
